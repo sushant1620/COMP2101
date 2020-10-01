@@ -27,4 +27,3 @@ echo "12 Largest files:"
 echo "============="
 find / -type f -exec ls -alh  --block-size=M 2>/dev/null {} \; | sort -hr -k5 | head -n 12 | awk '{print $9, $3, $5}' #file name, owner, and size in sequence
 echo ""
-{} \;
